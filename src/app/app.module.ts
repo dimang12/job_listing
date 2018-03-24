@@ -4,11 +4,21 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { JobComponent } from './job/job.component';
+import { HomeComponent } from './home/home.component';
+import { AccountComponent } from './account/account.component';
+import { CategoryComponent } from './category/category.component';
+import { LocationComponent } from './location/location.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    JobComponent,
+    HomeComponent,
+    AccountComponent,
+    CategoryComponent,
+    LocationComponent
   ],
   imports: [
     BrowserModule,
