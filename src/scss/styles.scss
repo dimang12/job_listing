@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+$background-color:#f5f5f5;
+$border-color:#dedede;
+
+body  {
+  background: $background-color;
+}
+.border-b-color   { border-bottom: $border-color solid 1px; }
+
