@@ -6,6 +6,7 @@ body  {
 
 .logo {
   margin-top: 100px;
+  display: block;
 }
 
 .border-round     { border-radius: 50px; }
@@ -16,6 +17,7 @@ body  {
   border-radius: $border-round;
   border: $border-color solid 1px;
   padding: 5px 5px 5px 20px;
+  margin-top: 30px;
 }
 
 .search-control input {
@@ -25,5 +27,6 @@ body  {
 
 .search-control .location-search {
   border-left: $border-color solid 1px;
+  padding-left: 15px;
 }
 .search-control .text-search:active { border:none; }
