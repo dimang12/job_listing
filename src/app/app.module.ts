@@ -10,6 +10,7 @@ import { AccountComponent } from './account/account.component';
 import { CategoryComponent } from './category/category.component';
 import { LocationComponent } from './location/location.component';
 import { CompanyComponent } from './company/company.component';
+import { ResumeComponent } from './resume/resume.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { CompanyComponent } from './company/company.component';
     AccountComponent,
     CategoryComponent,
     LocationComponent,
-    CompanyComponent
+    CompanyComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,
