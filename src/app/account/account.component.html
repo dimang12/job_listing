@@ -1,3 +1,25 @@
-<p>
-  account works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebar" class="">
+      <div class="sidebar-header">
+        <h3>
+
+        </h3>
+      </div>
+      <!-- Sidebar Links -->
+      <ul class="list-unstyled components">
+        <li class="active"><a routerLink="account">Resume</a></li>
+        <li><a href="#">Applied Jobs</a></li>
+        <li><a href="#">Saved Jobs</a></li>
+        <li><a href="#">Log out <span class="icon-switch"></span></a></li>
+      </ul>
+
+    </nav>
+    <div id="content" class="">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+
+

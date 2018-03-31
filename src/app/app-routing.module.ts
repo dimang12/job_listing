@@ -6,6 +6,7 @@ import { LocationComponent} from './location/location.component';
 import { AccountComponent} from './account/account.component';
 import { CompanyComponent } from './company/company.component';
 import { CategoryComponent } from './category/category.component';
+import { ResumeComponent } from './resume/resume.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -13,7 +14,9 @@ const routes: Routes = [
   {path: 'location', component: LocationComponent},
   {path: 'companies', component: CompanyComponent},
   {path: 'category', component: CategoryComponent},
-  {path: 'account', component: AccountComponent}
+  {path: 'account', component: AccountComponent, children: [
+      {path: '', component: ResumeComponent}
+    ]}
 ];
 
 @NgModule({
