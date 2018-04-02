@@ -11,6 +11,11 @@ import { CategoryComponent } from './category/category.component';
 import { LocationComponent } from './location/location.component';
 import { CompanyComponent } from './company/company.component';
 import { ResumeComponent } from './resume/resume.component';
+import { AppliedJobComponent } from './applied-job/applied-job.component';
+import { SavedJobComponent } from './saved-job/saved-job.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { SignOutComponent } from './sign-out/sign-out.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 @NgModule({
@@ -22,7 +27,12 @@ import { ResumeComponent } from './resume/resume.component';
     CategoryComponent,
     LocationComponent,
     CompanyComponent,
-    ResumeComponent
+    ResumeComponent,
+    AppliedJobComponent,
+    SavedJobComponent,
+    SignInComponent,
+    SignOutComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
