@@ -1,3 +1,39 @@
-<p>
-  job works!
-</p>
+
+    
+      <img  width="100" class="job-logo offset-3" src="assets/img/logo.png" alt="I am KALA" />
+    
+  
+        <form action="" class="job-search-control row offset-4">
+          <input type="text" class="text-search " name="txtSearch" placeholder="Text search">
+          <input type="text" class="location-search " name="location" placeholder="Location">
+          <button class="btn-primary  border-round"> <span class="icon-search"></span>  Search </button>
+        </form>
+<div class="top-Margin box">
+  <h6 class="offset">sort by</h6>
+        <h5 class="offset">Job Types</h5>
+        
+        <ul class="offset-3">
+          <li *ngFor="let types of typess"
+            (click)="onSelect(types)">
+            <span class="">{{types.typez}}</span>
+          </li>
+        </ul>
+
+        <h5 class="offset">Skill Levels</h5>
+        
+        <ul class="offset-3">
+          <li *ngFor="let skills of skillss"
+            (click)="onSelect1(skills)">
+            <span class="">{{skills.skillz}}</span>
+          </li>
+        </ul>
+      </div> 
+       
+        <div class="display-location" *ngIf="selectedTypes selectedSkills" >
+          <h2>{{selectedTypes.typez|uppercase}} Details types</h2>
+          <div><label>types: <input [(ngModel)]="selectedTypes.typez" placeholder="typez"></label></div>
+          <div><label>Skill: <input [(ngModel)]="selectedSkills.skillz" placeholder="skillz"></label></div>
+        </div>
+      
+        
+        
