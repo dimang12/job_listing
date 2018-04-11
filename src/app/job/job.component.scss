@@ -56,7 +56,7 @@ body  {
     height:550px;
     margin-left:15%;
     margin-top: 10px;    
-    background-color:#f2f351;
+    background-color:$background-color;
   }
   
   li{
@@ -71,11 +71,11 @@ body  {
     width:120px;
   }
 
-  h5{
+  h4{
       padding-left:70px;
   }
   h6{
-      padding-left:40px;
+      padding-left:70px;
   }
 
   .top-Margin{
@@ -87,3 +87,15 @@ body  {
     padding: 1px 16px;
     height:1000px;
   }
+
+
+  .bloc { 
+    background: $background-color; 
+    display:inline-block;
+    vertical-align:top; 
+    overflow:hidden;
+    margin-left:80px;  } //border:solid grey 1px;
+  .bloc select { 
+    background: $background-color; 
+    padding:10px; 
+    margin:-5px -20px -5px -5px; }

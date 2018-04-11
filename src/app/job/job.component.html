@@ -8,32 +8,38 @@
           <input type="text" class="location-search " name="location" placeholder="Location">
           <button class="btn-primary  border-round"> <span class="icon-search"></span>  Search </button>
         </form>
-<div class="top-Margin box">
-  <h6 class="offset">sort by</h6>
-        <h5 class="offset">Job Types</h5>
-        
-        <ul class="offset-3">
-          <li *ngFor="let types of typess"
-            (click)="onSelect(types)">
-            <span class="">{{types.typez}}</span>
-          </li>
-        </ul>
+<div class="box">
+        <h6>Sort by:</h6>
 
-        <h5 class="offset">Skill Levels</h5>
+        <div>
+           
+          <h4>Job types:</h4>
+           <div class="bloc">
+             <select name="Job-types" size="6">
+               <option value="all-kind-of-jobs" SELECTED>All kind of jobs</option>
+               <option value="full-time-jobs" >Full-time jobs</option>
+               <option value="part-time-jobs" >Part-time jobs</option>
+               <option value="contract" >Contract</option>
+               <option value="intership" >Internship</option>
+               <option value="freelance" >Freelance</option>
+              </select>
+           </div>
+<div>
+
+    <h4>Skill levels:</h4>
+    <div class="bloc">
+      <select name="Skill-levels" size="8">
+        <option value="all-levels" SELECTED>All levels</option>
+        <option value="entry-level" >Entry level</option>
+        <option value="junior-level" >Junior level</option>
+        <option value="senior-level" >Senior level</option>
+        <option value="leader" >Leader</option>
+        <option value="supervisor" >Supervisor</option>
+        <option value="manager" >Manager</option>
+        <option value="more-higher" >More higher</option>
+       </select>
+    </div>
+
         
-        <ul class="offset-3">
-          <li *ngFor="let skills of skillss"
-            (click)="onSelect1(skills)">
-            <span class="">{{skills.skillz}}</span>
-          </li>
-        </ul>
-      </div> 
-       
-        <div class="display-location" *ngIf="selectedTypes selectedSkills" >
-          <h2>{{selectedTypes.typez|uppercase}} Details types</h2>
-          <div><label>types: <input [(ngModel)]="selectedTypes.typez" placeholder="typez"></label></div>
-          <div><label>Skill: <input [(ngModel)]="selectedSkills.skillz" placeholder="skillz"></label></div>
-        </div>
-      
-        
-        
+      </div>
+</div>
