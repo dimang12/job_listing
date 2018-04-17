@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResumeService } from '../services/resume.service';
 
 @Component({
   selector: 'app-resume',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resume.component.scss']
 })
 export class ResumeComponent implements OnInit {
+  public resume: any;
 
-  constructor() { }
+  constructor(private resumeService: ResumeService) { }
 
   ngOnInit() {
+    this.resume = this.resumeService.getResume()[0];
+    // console.log(this.resume[0].firstName);
   }
 
 }

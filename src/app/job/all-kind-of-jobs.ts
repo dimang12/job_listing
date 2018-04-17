@@ -1,5 +1,5 @@
-import{ AllJobs } from '../job/all-jobs';
+import { AllJobs } from './all-jobs';
 
-export const ALLKINDOFJOBSAllLEVELS : AllJobs[] = [
-    
+export const ALLKINDOFJOBSAllLEVELS: AllJobs[] = [
+
 ];
