@@ -13,31 +13,32 @@ body  {
   
   .job-logo {
     margin-top: 40px;
-    display: block;
+    //display: block;
     float:left;
   }
   
   .border-round     { border-radius: 50px; }
-  .border-b-color   { border-bottom: $border-color solid 1px; }
+  .border-b-color   { 
+    border : none;
+    //border-bottom: $border-color solid 1px; 
+  }
   
   .job-search-control   {
-    overflow:auto;
-   // width:560px;
     background-color: $background-white;
     border-radius: $border-round;
-    border: $border-color solid 1px;
+   // border: $border-color solid 1px;
     padding: 5px 5px 5px 20px;
     margin-top: 40px;
   }
   
   .job-search-control input {
-    padding: 5px;
     border: none;
   }
   
   .job-search-control .location-search {
-    border-left: $border-color solid 1px;
-    padding-left: 15px;
+    border:none;
+    //border-left: $border-color solid 1px;
+    //padding-left: 15px;
   }
   .job-search-control .text-search:active { border:none; }
 
@@ -50,11 +51,6 @@ body  {
    // background-color:red;//$background-color;
   }
   
-  
-  .top-Margin{
-      padding-top:10px;
-  }
-
   .display-location{
     margin-top:20px;
     margin-left: 500px;
@@ -64,17 +60,28 @@ body  {
   }
 
  ul{
-   color:#000;
    list-style-type: none;
-   display: inline-table;
-   overflow: auto;
+//   display: inline-table;
+  // overflow: auto;
  }
 
  li:visited{  
-  text-decoration: none;
+  color:green;
  }
 
- li a.active{
+ li:active{
   list-style-image: url(image/tick.png);
  }
+
+ a:active{
+  list-style-image: url(image/tick.png);
+ }
+ a:hover{
+  list-style-image: url(image/tick.png);  
+ }
  
+ a{
+   color:#000;
+   text-decoration: none;
+   font-style: bold;
+ }
