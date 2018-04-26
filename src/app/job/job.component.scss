@@ -73,15 +73,20 @@ body  {
   list-style-image: url(image/tick.png);
  }
 
- a:active{
-  list-style-image: url(image/tick.png);
- }
- a:hover{
-  list-style-image: url(image/tick.png);  
- }
  
  a{
    color:#000;
    text-decoration: none;
    font-style: bold;
  }
+
+ a:active{
+   color:rgb(153, 90, 100);
+  list-style-image: url(image/tick.png);
+ }
+ li a.hover{
+   color:rgb(153, 90, 100);
+  list-style-image: url(image/tick.png);
+    
+ }
+ 
