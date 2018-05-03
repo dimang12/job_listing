@@ -20,6 +20,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 
 import { ResumeService } from './services/resume.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CityService } from './services/city.service';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [
-    ResumeService
+    ResumeService,
+    CityService
   ],
   bootstrap: [AppComponent]
 })
