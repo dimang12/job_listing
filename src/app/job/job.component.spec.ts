@@ -23,3 +23,4 @@ describe('JobComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

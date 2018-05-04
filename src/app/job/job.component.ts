@@ -8,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 
 export class JobComponent implements OnInit {
   
+  displayInfo = false;
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit() {
   }
