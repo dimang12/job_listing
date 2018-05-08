@@ -1,8 +1,8 @@
 import { Component, OnInit} from '@angular/core';
 
-export class JoblistLocaitonComponent implements OnInit{
+export class JoblistLocaitonComponent implements OnInit {
 
-  ngOnInit(){
+  ngOnInit() {
 
   }
 }

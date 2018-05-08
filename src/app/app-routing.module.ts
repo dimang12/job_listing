@@ -12,11 +12,14 @@ import {SavedJobComponent} from './saved-job/saved-job.component';
 import {SignInComponent} from './sign-in/sign-in.component';
 import {SignOutComponent} from './sign-out/sign-out.component';
 import {SignUpComponent} from './sign-up/sign-up.component';
+import {JoblistLocaitonComponent} from './location/joblist.locaiton.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'job', component: JobComponent},
-  {path: 'location', component: LocationComponent},
+  {path: 'location', component: LocationComponent, children: [
+      { path: 'list', component: JoblistLocaitonComponent}
+    ]},
   {path: 'companies', component: CompanyComponent},
   {path: 'category', component: CategoryComponent},
   {path: 'account', component: AccountComponent, children: [
