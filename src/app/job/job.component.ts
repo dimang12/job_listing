@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { JobService } from '../job.service';
+import { JobService } from '../services/job.service';
 
 @Component({
   selector: 'app-job',
@@ -38,20 +38,20 @@ export class JobComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.jobList = this._jobService.getJobs();
+    //this.jobList = this._jobService.getJobs();
     
-    /* this._jobService.getJobs()
-    .subcribe(data => this.jobList = data,
+     this._jobService.getJobs()
+    .subscribe(data => this.jobList = data,
     error=>this.errorMsg = error);
     
-    */
+    
   }
 
   KlickJob(value){
         
     if(value == 1){
     console.log(value);
-    this.jobList = this._jobService.getJobs_all();
+    this._jobService.getJobs();
     }
   }
 
