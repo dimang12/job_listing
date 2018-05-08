@@ -10,23 +10,24 @@
   <div>
     <h5 class="offset-1">Job types:</h5>
 
-      <ul name="Job-types">
-        <li value="all-kind-of-jobs">
+    <div>
+    <ul name="Job-types">
+        <li (click)="Klick(all)" value="all">
           All kind of jobs
         </li>
-        <li>
+        <li (click)="Klick(full_time_jobs)">
           Full-time jobs
         </li>
-        <li>
+        <li (click)="Klick(part_time_jobs)">
           Part-time jobs
         </li>
-        <li>
+        <li (click)="Klick(contract)">
           Contract
         </li>
-        <li>
+        <li (click)="Klick(intership)">
           Intership
         </li>
-        <li>
+        <li (click)="Klick(freelance)">
           Freelance
         </li>
       </ul>
@@ -37,47 +38,156 @@
 <div>
   <h5 class="offset-1">Skill levels:</h5>
   <ul>
-    <li>
+    <li (click)="Klick()">
       All Levels
     </li>
-    <li>
+    <li (click)="Klick()">
       Entry Level
     </li>
-    <li>
+    <li (click)="Klick()">
       Junior Level
     </li>
-    <li>
+    <li (click)="Klick()">
       Senior Level
     </li>
-    <li>
+    <li (click)="Klick()">
       Leader
     </li>
-    <li>
+    <li (click)="Klick()">
       Supervisor
     </li>
-    <li>
+    <li (click)="Klick()">
       Manager
     </li>
-    <li>
+    <li (click)="Klick()">
       More Higher
     </li>
   </ul>
 </div>
 </div>
-<div class="display-location">
-  <span *ngIf="displayInfo; else elseBlock">Here go the information
-    </span>
-  </div>
 
-
-<!--
-<div *ngIf="dataFromServer; else loadingBar">
-  <p>{{dataFromServer}}</p>
 </div>
 
-<ng-template #loadingBar>
-  <p>Loading</p>
-</ng-template>
--->
+
+<div class="display-location">
 
 
+
+ 
+
+<div [ngSwitch]="switch">
+  
+  <div *ngSwitchCase="'all_kind_n_all_level'">
+    <ul *ngFor="let job of jobList">
+      <li><p>{{job.jobTitle}}<br /> {{job.jobType}}<br />{{job.detail}}</p></li>
+    </ul>
+  </div>
+
+  <div *ngSwitchCase="'all_kind_n_entry'">
+      all_kind_n_entry
+  </div>
+  
+  <div *ngSwitchCase="'all_kind_n_junior'"> 
+    all junior
+  </div>
+  
+  <div *ngSwitchCase="'all_kind_n_senior'">
+    all Senior
+  </div>
+
+  <div *ngSwitchCase="'all_kind_n_leader'">
+    all Leader
+  </div>
+
+  <div *ngSwitchCase="'all_kind_n_supervisor'">
+    all supervi... 
+  </div>
+
+  <div *ngSwitchCase="'all_kind_n_manager'">
+    all mana...  
+  </div>
+  
+  <div *ngSwitchCase="'all_kind_n_more_higher'">
+    all n Higher  
+  </div>
+
+  <!--Full time ........................................ -->
+  <div *ngSwitchCase="'full_time_n_all_level'">
+      <ul *ngFor="let job of jobList">
+        <li><p>{{job.jobTitle}}<br /> {{job.jobType}}<br />{{job.detail}}</p></li>
+      </ul>
+    </div>
+  
+    <div *ngSwitchCase="'full_time_n_entry'">
+        all_kind_n_entry
+    </div>
+    
+    <div *ngSwitchCase="'full_time_n_junior'"> 
+      all junior
+    </div>
+    
+    <div *ngSwitchCase="'full_time_n_senior'">
+      all Senior
+    </div>
+  
+    <div *ngSwitchCase="'full_time_n_leader'">
+      all Leader
+    </div>
+  
+    <div *ngSwitchCase="'full_time_n_supervisor'">
+      all supervi... 
+    </div>
+  
+    <div *ngSwitchCase="'full_time_n_manager'">
+      all mana...  
+    </div>
+    
+    <div *ngSwitchCase="'full_time_n_more_higher'">
+      all n Higher  
+    </div>
+
+    <!--Part time ............................... -->
+
+    <div *ngSwitchCase="'part_time_n_all_level'">
+        <ul *ngFor="let job of jobList">
+          <li><p>{{job.jobTitle}}<br /> {{job.jobType}}<br />{{job.detail}}</p></li>
+        </ul>
+      </div>
+    
+      <div *ngSwitchCase="'part_time_n_entry'">
+          all_kind_n_entry
+      </div>
+      
+      <div *ngSwitchCase="'part_time_n_junior'"> 
+        all junior
+      </div>
+      
+      <div *ngSwitchCase="'part_time_n_senior'">
+        all Senior
+      </div>
+    
+      <div *ngSwitchCase="'part_time_n_leader'">
+        all Leader
+      </div>
+    
+      <div *ngSwitchCase="'part_time_n_supervisor'">
+        all supervi... 
+      </div>
+    
+      <div *ngSwitchCase="'part_time_n_manager'">
+        all mana...  
+      </div>
+      
+      <div *ngSwitchCase="'part_time_n_more_higher'">
+        all n Higher  
+      </div>
+  
+  <div *ngSwitchDefault>none
+
+  </div>
+</div>
+
+
+
+
+</div>
