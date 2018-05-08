@@ -37,6 +37,11 @@ export class JobComponent implements OnInit {
 
   ngOnInit() {
     this.jobList = this._jobService.getJobs();
+    
+    /* this._jobService.getJobs()
+    .subcribe(data => this.jobList = data);
+    
+    */
   }
 
   KlickJob(value){
