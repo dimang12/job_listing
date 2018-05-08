@@ -27,27 +27,27 @@ export class JobService {
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Job } from '../job';
-import { Observable } from "rxjs/Observable";
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 
 @Injectable()
 export class JobService {
 
-  private _url: string = "localhost://localhost:8081/location/job/";
+  private _url = 'http://localhost:8081/jobs/all';
 
   constructor(private http: HttpClient) { }
 
 
-  getJobs():Observable<Job[]>{
+  getJobs(): Observable<Job[]>{
     return this.http.get<Job[]>(this._url)
     .catch(this.errorHandler);
   }
 
   errorHandler(error: HttpErrorResponse){
-    return Observable.throw(error.message|| "Server Error");
+    return Observable.throw(error.message || 'Server Error');
   }
 
-  
 
-} 
+
+}
