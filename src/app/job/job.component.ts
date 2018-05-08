@@ -28,6 +28,8 @@ export class JobComponent implements OnInit {
   public value_6="6";
   public value_7="7";
   public value_8="8";
+
+  public errorMsg;
   
 
   public jobList = [];
@@ -39,7 +41,8 @@ export class JobComponent implements OnInit {
     this.jobList = this._jobService.getJobs();
     
     /* this._jobService.getJobs()
-    .subcribe(data => this.jobList = data);
+    .subcribe(data => this.jobList = data,
+    error=>this.errorMsg = error);
     
     */
   }

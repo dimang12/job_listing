@@ -26,8 +26,10 @@ export class JobService {
 
 /*
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Job } from './job';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/throw';
 
 @Injectable()
 export class JobService {
@@ -39,6 +41,11 @@ export class JobService {
 
   getJobs():Observable<Job[]>{
     return this.http.get<Job[]>(this._url);
+    .catch(this.errorHandler);
+  }
+
+  errorHandler(error: HttpErrorResponse){
+    return Observable.throw(error.message|| "Server Error");
   }
 
   getJobs_all(){
