@@ -52,41 +52,48 @@ body  {
   }
   
   .display-location{
-    margin-top:20px;
-    margin-left: 500px;
+    margin-top:40px;
+    margin-left: 400px;
     padding: 1px 16px;
     height:auto;
     //background:yellow;
   }
 
+  h6{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.1em;
+  }
+
  ul{
    list-style-type: none;
+   
 //   display: inline-table;
   // overflow: auto;
  }
+li:hover{
+  color:blue;
+}
 
- li:visited{  
-  color:green;
- }
-
- li:active{
+ a:visited{  
   list-style-image: url(image/tick.png);
  }
 
  
- a{
+ .a{
    color:#000;
    text-decoration: none;
    font-style: bold;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-size: 1.05em;
  }
 
  a:active{
-   color:rgb(153, 90, 100);
   list-style-image: url(image/tick.png);
+  color:yellow;
  }
- li a.hover{
-   color:rgb(153, 90, 100);
-  list-style-image: url(image/tick.png);
-    
+
+  
+ .a:hover{
+  color:blue;
  }
  

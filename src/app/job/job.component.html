@@ -12,23 +12,23 @@
 
     <div>
     <ul name="Job-types">
-        <li (click)="Klick(all)" value="all">
-          All kind of jobs
+        <li class="a" (click)='KlickJob(value_a)' [id]="value_a">
+         All kind of jobs
         </li>
-        <li (click)="Klick(full_time_jobs)">
+        <li class="a" (click)='KlickJob(value_b)' [id]="value_b">
           Full-time jobs
         </li>
-        <li (click)="Klick(part_time_jobs)">
-          Part-time jobs
+        <li class="a" (click)='KlickJob(value_c)' [id]="value_c">
+           Part-time jobs
         </li>
-        <li (click)="Klick(contract)">
-          Contract
+        <li class="a" (click)='KlickJob(value_d)' [id]="value_d">
+            Contract
         </li>
-        <li (click)="Klick(intership)">
-          Intership
+        <li class="a" (click)='KlickJob(value_e)' [id]="value_e">
+            Intership
         </li>
-        <li (click)="Klick(freelance)">
-          Freelance
+        <li class="a" (click)='KlickJob(value_f)' [id]="value_f">
+            Freelance
         </li>
       </ul>
   </div>
@@ -38,29 +38,29 @@
 <div>
   <h5 class="offset-1">Skill levels:</h5>
   <ul>
-    <li (click)="Klick()">
+    <li class="a" (click)='KlickJob(value_1)' [id]="value_1">
       All Levels
     </li>
-    <li (click)="Klick()">
+    <li class="a" (click)='KlickJob(value_2)' [id]="value_2">
       Entry Level
     </li>
-    <li (click)="Klick()">
-      Junior Level
+    <li class="a" (click)='KlickJob(value_3)' [id]="value_3">
+     Junior Level
     </li>
-    <li (click)="Klick()">
-      Senior Level
+    <li class="a" (click)='KlickJob(value_4)' [id]="value_4">
+        Senior Level
     </li>
-    <li (click)="Klick()">
-      Leader
+    <li class="a" (click)='KlickJob(value_5)' [id]="value_5">
+        Leader
     </li>
-    <li (click)="Klick()">
-      Supervisor
+    <li class="a" (click)='KlickJob(value_6)' [id]="value_6">
+       Supervisor
     </li>
-    <li (click)="Klick()">
-      Manager
+    <li class="a" (click)='KlickJob(value_7)' [id]="value_7">
+        Manager
     </li>
-    <li (click)="Klick()">
-      More Higher
+    <li class="a" (click)='KlickJob(value_8)' [id]="value_8">
+        More Higher
     </li>
   </ul>
 </div>
@@ -71,10 +71,7 @@
 
 <div class="display-location">
 
-
-
- 
-
+  <h3>{{errorMsg}}</h3>
 <div [ngSwitch]="switch">
   
   <div *ngSwitchCase="'all_kind_n_all_level'">
@@ -83,104 +80,8 @@
     </ul>
   </div>
 
-  <div *ngSwitchCase="'all_kind_n_entry'">
-      all_kind_n_entry
-  </div>
-  
-  <div *ngSwitchCase="'all_kind_n_junior'"> 
-    all junior
-  </div>
-  
-  <div *ngSwitchCase="'all_kind_n_senior'">
-    all Senior
-  </div>
-
-  <div *ngSwitchCase="'all_kind_n_leader'">
-    all Leader
-  </div>
-
-  <div *ngSwitchCase="'all_kind_n_supervisor'">
-    all supervi... 
-  </div>
-
-  <div *ngSwitchCase="'all_kind_n_manager'">
-    all mana...  
-  </div>
-  
-  <div *ngSwitchCase="'all_kind_n_more_higher'">
-    all n Higher  
-  </div>
-
-  <!--Full time ........................................ -->
-  <div *ngSwitchCase="'full_time_n_all_level'">
-      <ul *ngFor="let job of jobList">
-        <li><p>{{job.jobTitle}}<br /> {{job.jobType}}<br />{{job.detail}}</p></li>
-      </ul>
-    </div>
-  
-    <div *ngSwitchCase="'full_time_n_entry'">
-        all_kind_n_entry
-    </div>
+ 
     
-    <div *ngSwitchCase="'full_time_n_junior'"> 
-      all junior
-    </div>
-    
-    <div *ngSwitchCase="'full_time_n_senior'">
-      all Senior
-    </div>
-  
-    <div *ngSwitchCase="'full_time_n_leader'">
-      all Leader
-    </div>
-  
-    <div *ngSwitchCase="'full_time_n_supervisor'">
-      all supervi... 
-    </div>
-  
-    <div *ngSwitchCase="'full_time_n_manager'">
-      all mana...  
-    </div>
-    
-    <div *ngSwitchCase="'full_time_n_more_higher'">
-      all n Higher  
-    </div>
-
-    <!--Part time ............................... -->
-
-    <div *ngSwitchCase="'part_time_n_all_level'">
-        <ul *ngFor="let job of jobList">
-          <li><p>{{job.jobTitle}}<br /> {{job.jobType}}<br />{{job.detail}}</p></li>
-        </ul>
-      </div>
-    
-      <div *ngSwitchCase="'part_time_n_entry'">
-          all_kind_n_entry
-      </div>
-      
-      <div *ngSwitchCase="'part_time_n_junior'"> 
-        all junior
-      </div>
-      
-      <div *ngSwitchCase="'part_time_n_senior'">
-        all Senior
-      </div>
-    
-      <div *ngSwitchCase="'part_time_n_leader'">
-        all Leader
-      </div>
-    
-      <div *ngSwitchCase="'part_time_n_supervisor'">
-        all supervi... 
-      </div>
-    
-      <div *ngSwitchCase="'part_time_n_manager'">
-        all mana...  
-      </div>
-      
-      <div *ngSwitchCase="'part_time_n_more_higher'">
-        all n Higher  
-      </div>
   
   <div *ngSwitchDefault>none
 
