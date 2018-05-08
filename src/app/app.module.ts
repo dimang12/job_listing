@@ -21,6 +21,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { ResumeService } from './services/resume.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CityService } from './services/city.service';
+import { JobService } from './job.service';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { CityService } from './services/city.service';
   ],
   providers: [
     ResumeService,
-    CityService
+    CityService,
+    JobService
   ],
   bootstrap: [AppComponent]
 })

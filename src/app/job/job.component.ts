@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JobService } from '../job.service';
 
 @Component({
   selector: 'app-job',
@@ -7,20 +8,43 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class JobComponent implements OnInit {
+
+  public all_kind_of_job="test"; 
   
- public switch ="all_kind_n_all_level";
+  public switch ="all_kind_n_all_level";
+  
+  public value_a="a";
+  public value_b="b";
+  public value_c="c";
+  public value_d="d";
+  public value_e="e";
+  public value_f="f";
 
-  public jobList = [
-    {"jobTitle":"Digital/Web designer","jobType":"AVB Marketing","location":"Sacramento, CA","detail":"Bachelors degree in web/graphic design or equivalent 3 years of experience in a web graphics design environment. No phone call please..","keyWord":"Photo shop Illustrator HTML"},
-    {"jobTitle":"Software Develop Intern","jobType":"AVB Marketing","location":"Sacramento, CA","detail":"Bachelors degree in web/graphic design or equivalent 3 years of experience in a web graphics design environment. No phone call please..","keyWord":"Photo shop Illustrator HTML"},
-    {"jobTitle":"IT Support Specialist","jobType":"AVB Marketing","location":"Sacramento, CA","detail":"Bachelors degree in web/graphic design or equivalent 3 years of experience in a web graphics design environment. No phone call please..","keyWord":"Photo shop Illustrator HTML"},
-    {"jobTitle":"AppleCare Support","jobType":"AVB Marketing","location":"Sacramento, CA","detail":"Bachelors degree in web/graphic design or equivalent 3 years of experience in a web graphics design environment. No phone call please..","keyWord":"Photo shop Illustrator HTML"},
-  ]
+  public value_1="1";
+  public value_2="2";
+  public value_3="3";
+  public value_4="4";
+  public value_5="5";
+  public value_6="6";
+  public value_7="7";
+  public value_8="8";
+  
 
-  constructor() {
+  public jobList = [];
+
+  constructor(private _jobService: JobService) {
    }
 
   ngOnInit() {
+    this.jobList = this._jobService.getJobs();
+  }
+
+  KlickJob(value){
+        
+    if(value == 1){
+    console.log(value);
+    this.jobList = this._jobService.getJobs_all();
+    }
   }
 
    Klick(event){
