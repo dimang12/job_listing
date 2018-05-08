@@ -53,6 +53,14 @@ export class JobComponent implements OnInit {
     console.log(value);
     this._jobService.getJobs();
     }
+    if(value == 'a'){console.log(value);}
+    if(value == 'b'){console.log(value);}
+    if(value == 'c'){console.log(value);}
+    if(value == 'd'){console.log(value);}
+    if(value == 'e'){console.log(value);}
+    if(value == 'f'){console.log(value);}
+    if(value == 'g'){console.log(value);}
+    if(value == 'h'){console.log(value);}
   }
 
    Klick(event){
