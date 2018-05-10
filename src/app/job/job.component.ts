@@ -11,11 +11,9 @@ export class JobComponent implements OnInit {
 
   
   public trigger="";
-  public messageShow="";
-
-  public all_kind_of_job="test"; 
+  public messageShow=""; 
   
-  public switch ="all_kind_n_all_level";
+  public switch ="zzz";//all_kind_n_all_level";
   
   public value_a="a";
   public value_b="b";
@@ -36,7 +34,9 @@ export class JobComponent implements OnInit {
   public errorMsg;
   
   public jobList = [];
-  public allJobList="aa";
+  public firstPage=this._jobService.getJobs_all();
+
+  
 
   
   KlickJob(value){
@@ -45,7 +45,8 @@ export class JobComponent implements OnInit {
 //all kind of jobs
     if(value == 'a'){
       this.trigger=value;
-//      this.jobList= this._jobService.getJobs_all();
+      this.switch="showMessage";
+      this.jobList= this._jobService.getJobs_all();
      // switch = "all_kind_n_all_level";
      // this._jobService.getJobs_all();
     }
@@ -53,30 +54,35 @@ export class JobComponent implements OnInit {
 //full time jobs
     if(value == 'b'){
       this.trigger=value;
+      this.switch="showMessage";
  //     this.jobList = this._jobService.getJobs_full();
     }
 
 //part time jobs
     if(value == 'c'){
       this.trigger=value;
+      this.switch="showMessage";
  //     this.jobList = this._jobService.getJobs_part();
     }
 
 //contract
     if(value == 'd'){
       this.trigger=value;
+      this.switch="showMessage";
  //     this.jobList = this._jobService.getJobs_contract();
     }
 
 //intership
     if(value == 'e'){
       this.trigger=value;
+      this.switch="showMessage";
 //      this.jobList = this._jobService.getJobs_intership();
     }
 
 //freelance
     if(value == 'f'){
       this.trigger=value;
+      this.switch="showMessage";
   //    this.jobList = this._jobService.getJobs_freelance();
     }
 

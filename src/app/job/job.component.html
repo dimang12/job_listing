@@ -25,22 +25,22 @@
      
     <ul name="Job-types">
         <li class="a" id="TestT" (click)='KlickJob(value_a)' [id]="value_a">
-         All kind of jobs
+        <a>All kind of jobs</a> 
         </li>
         <li class="a" (click)='KlickJob(value_b)' [id]="value_b">
-          Full-time jobs
+          <a>Full-time jobs</a>
         </li>
         <li class="a" (click)='KlickJob(value_c)' [id]="value_c">
-           Part-time jobs
+           <a>Part-time jobs</a>
         </li>
         <li class="a" (click)='KlickJob(value_d)' [id]="value_d">
-            Contract
+            <a>Contract</a>
         </li>
         <li class="a" (click)='KlickJob(value_e)' [id]="value_e">
-            Intership
+            <a>Intership</a>
         </li>
         <li class="a" (click)='KlickJob(value_f)' [id]="value_f">
-            Freelance
+            <a>Freelance</a>
         </li>
       </ul> 
   </div>
@@ -50,26 +50,26 @@
 <div>
   <h5 class="offset-1">Skill levels:</h5>
   <ul>
-    <li class="a active" (click)="KlickJob(value_1)" [id]="value_1">
-      All Levels
+    <li class="a" (click)="KlickJob(value_1)" [id]="value_1">
+      <a>All Levels</a>
     </li>
     <li class="a" (click)='KlickJob(value_2)' [id]="value_2">
-      Entry Level
+      <a>Entry Level</a>
     </li>
     <li class="a" (click)='KlickJob(value_3)' [id]="value_3">
-     Junior Level
+     <a>Junior Level</a>
     </li>
     <li class="a" (click)='KlickJob(value_4)' [id]="value_4">
-        Senior Level
+        <a>Senior Level</a>
     </li>
     <li class="a" (click)='KlickJob(value_5)' [id]="value_5">
-        Leader
+        <a>Leader</a>
     </li>
     <li class="a" (click)='KlickJob(value_6)' [id]="value_6">
-       Supervisor
+       <a>Supervisor</a>
     </li>
     <li class="a" (click)='KlickJob(value_7)' [id]="value_7">
-        Manager
+        <a>Manager</a>
     </li>
     <li class="a" (click)='KlickJob(value_8)' [id]="value_8">
         More Higher
@@ -87,9 +87,21 @@
   <h3>{{errorMsg}}</h3>
 <div [ngSwitch]="switch">
   
-  <div *ngSwitchCase="'all_kind_n_all_level'">
+  <div *ngSwitchCase="'showMessage'">
     <ul *ngFor="let job of jobList">
-      <li><p>id {{job.id}} <br /> {{job.title}} <br />city {{job.city}}<br />job_type{{job.job_type}}</p></li>
+      <li><h5 style="color:blueviolet">title {{job.title}}</h5>
+        <p><span style="color:lightskyblue">job_type{{job.job_type}}</span> city {{job.city}}</p>
+      <p>{{job.id}} {{job.summary}} </p>
+        </li>
+    </ul>
+  </div>
+
+  <div *ngSwitchCase="'zzz'">
+    <ul *ngFor="let job of firstPage">
+      <li><h5 style="color:blueviolet">title {{job.title}}</h5>
+        <p><span style="color:lightskyblue">job_type{{job.job_type}}</span> city {{job.city}}</p>
+      <p>{{job.id}} {{job.summary}} </p>
+        </li>
     </ul>
   </div>
   
@@ -100,6 +112,7 @@
 
 <p>trigger is : {{trigger}}</p>
 <p>message show : {{messageShow}}</p>
+<p>showMessage : {{switch}}</p>
 
 </div>
 
