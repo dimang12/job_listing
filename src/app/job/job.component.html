@@ -11,18 +11,20 @@
     <h5 class="offset-1">Job types:</h5>
 
     <div>
+
+       <!--
       <select class="smallBox" size='6'>
-        <option selected="selected" (click)='KlickJob(value_a)' [id]="value_a">All kind of jobs</option>
-        <option (click)='KlickJob(value_b)' [id]="value_b">Full-time jobs</option>
+        <option selected="selected" (click)='jobType(value_a)' [id]="value_a">All kind of jobs</option>
+        <option (click)='jobType(value_b)' [id]="value_b">Full-time jobs</option>
         <option (click)='KlickJob(value_c)' [id]="value_c">Part-time jobs</option>
         <option (click)='KlickJob(value_d)' [id]="value_d">Contract</option>
         <option (click)='KlickJob(value_e)' [id]="value_e">Intership</option>
         <option (click)='KlickJob(value_f)' [id]="value_f">Freelance</option>
       </select>
-
-      <!--
+-->
+     
     <ul name="Job-types">
-        <li class="a" (click)='KlickJob(value_a)' [id]="value_a">
+        <li class="a" id="TestT" (click)='KlickJob(value_a)' [id]="value_a">
          All kind of jobs
         </li>
         <li class="a" (click)='KlickJob(value_b)' [id]="value_b">
@@ -40,7 +42,7 @@
         <li class="a" (click)='KlickJob(value_f)' [id]="value_f">
             Freelance
         </li>
-      </ul> -->
+      </ul> 
   </div>
 
 
@@ -48,7 +50,7 @@
 <div>
   <h5 class="offset-1">Skill levels:</h5>
   <ul>
-    <li class="a" (onload)='KlickJob(value_1)' [id]="value_1">
+    <li class="a active" (click)="KlickJob(value_1)" [id]="value_1">
       All Levels
     </li>
     <li class="a" (click)='KlickJob(value_2)' [id]="value_2">
@@ -80,25 +82,24 @@
 
 
 <div class="display-location">
+    <script src="greeter.js"></script>
 
   <h3>{{errorMsg}}</h3>
 <div [ngSwitch]="switch">
   
   <div *ngSwitchCase="'all_kind_n_all_level'">
     <ul *ngFor="let job of jobList">
-      <li><p>{{job.jobTitle}}<br /> {{job.jobType}}<br />{{job.detail}}</p></li>
+      <li><p>id {{job.id}} <br /> {{job.title}} <br />city {{job.city}}<br />job_type{{job.job_type}}</p></li>
     </ul>
   </div>
-
- 
-    
   
   <div *ngSwitchDefault>none
 
   </div>
 </div>
 
-
-
+<p>trigger is : {{trigger}}</p>
+<p>message show : {{messageShow}}</p>
 
 </div>
+

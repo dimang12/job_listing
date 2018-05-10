@@ -22,7 +22,7 @@ import { ResumeService } from './services/resume.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CityService } from './services/city.service';
 import { JobService } from './services/job.service';
-import { Job } from './job';
+import { Job } from './job/job';
 
 
 @NgModule({
