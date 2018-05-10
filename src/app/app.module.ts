@@ -23,6 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { CityService } from './services/city.service';
 import { JobService } from './services/job.service';
 import { Job } from './job';
+import {JoblistLocaitonComponent} from './location/joblist.locaiton.component';
+import {HomeLocationComponent} from './location/home/home.location.component';
 
 
 @NgModule({
@@ -33,6 +35,8 @@ import { Job } from './job';
     AccountComponent,
     CategoryComponent,
     LocationComponent,
+      JoblistLocaitonComponent,
+      HomeLocationComponent,
     CompanyComponent,
     ResumeComponent,
     AppliedJobComponent,

@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="row m-t-90">
+    <div class="col-10 offset-1">
+      <div class="row">
+        <div class="col-3">
+          <img width="120" class="" src="assets/img/logo.png" alt="I am KALA" />
+        </div>
+
+        <form action="" class="search-control m-0 col-9">
+          <div class="row">
+            <input type="text" class="text-search col-5" name="txtSearch" placeholder="Text search">
+            <input type="text" class="location-search col-4" name="location" placeholder="Location">
+            <div class="col-3">
+              <button class="btn-primary border-round btn float-right"> <span class="icon-search"></span>  Search </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <div class="row m-t-30">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-4 offset-4 text-center">
+          <h2 class="display-4">Cities</h2>
+          <div class="divider">
+            <hr>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center mt-2">
+          <a routerLink="list" *ngFor="let city of cities" class="btn btn-outline-info border-round m-2">
+            {{city.title}}
+            <span class="btn-secondary border-round btn-sm ml-3">{{city.job_number}}</span>
+          </a>
+          <a href="" class="btn btn-outline-info border-round m-2">Long Beach <span class="btn-secondary border-round btn-sm ml-3">21</span></a>
+          <a href="" class="btn btn-outline-info border-round m-2">Bakersfield <span class="btn-secondary border-round btn-sm ml-3">15</span></a>
+          <a href="" class="btn btn-outline-info border-round m-2">Anaheim <span class="btn-secondary border-round btn-sm ml-3">10</span></a>
+          <a href="" class="btn btn-outline-info border-round m-2">Riverside <span class="btn-secondary border-round btn-sm ml-3">1</span></a>
+          <a href="" class="btn btn-outline-info border-round m-2">Santa Barbara <span class="btn-secondary border-round btn-sm ml-3">2</span></a>
+          <a href="" class="btn btn-outline-info border-round m-2">Irvine <span class="btn-secondary border-round btn-sm ml-3">18</span></a>
+          <a href="" class="btn btn-outline-info border-round m-2">Stockton <<span class="btn-secondary border-round btn-sm ml-3">28</span></a>
+          <a href="" class="btn btn-outline-info border-round m-2">Monterey <span class="btn-secondary border-round btn-sm ml-3">13</span></a>
+          <a href="" class="btn btn-outline-info border-round m-2">San Jose <span class="btn-secondary border-round btn-sm ml-3">81</span></a>
+          <a href="" class="btn btn-outline-info border-round m-2">San Fransisco <span class="btn-secondary border-round btn-sm ml-3">1,200</span></a>
+          <a href="" class="btn btn-outline-info border-round m-2">Mountain View <span class="btn-secondary border-round btn-sm ml-3">112</span></a>
+          <a href="" class="btn btn-outline-info border-round m-2">Pasadena <span class="btn-secondary border-round btn-sm ml-3">7</span></a>
+          <a href="" class="btn btn-outline-info border-round m-2">Modesto <span class="btn-secondary border-round btn-sm ml-3">12</span></a>
+          <a href="" class="btn btn-outline-info border-round m-2">Santa Monica <span class="btn-secondary border-round btn-sm ml-3">18</span></a>
+          <a href="" class="btn btn-outline-info border-round m-2">Santa Cruz <span class="btn-secondary border-round btn-sm ml-3">33</span></a>
+          <a href="" class="btn btn-outline-info border-round m-2">San bernardino <span class="btn-secondary border-round btn-sm ml-3">26</span></a>
+          <a href="" class="btn btn-outline-info border-round m-2">Fremont <span class="btn-secondary border-round btn-sm ml-3">45</span></a>
+          <a href="" class="btn btn-outline-info border-round m-2">Santa Rosa <span class="btn-secondary border-round btn-sm ml-3">11</span></a>
+          <a href="" class="btn btn-outline-info border-round m-2">Santa Ana <span class="btn-secondary border-round btn-sm ml-3">9</span></a>
+          <a href="" class="btn btn-outline-info border-round m-2">Cupertino <span class="btn-secondary border-round btn-sm ml-3">210</span></a>
+          <a href="" class="btn btn-outline-info border-round m-2">Berverly Hills <span class="btn-secondary border-round btn-sm ml-3">5</span></a>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-12">
+
+    </div>
+  </div>
+</div>
