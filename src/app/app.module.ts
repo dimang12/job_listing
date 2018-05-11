@@ -22,9 +22,13 @@ import { ResumeService } from './services/resume.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CityService } from './services/city.service';
 import { JobService } from './services/job.service';
+<<<<<<< HEAD
 import { Job } from './job';
 import {JoblistLocaitonComponent} from './location/joblist.locaiton.component';
 import {HomeLocationComponent} from './location/home/home.location.component';
+=======
+import { Job } from './job/job';
+>>>>>>> fb912e5850a56ca3741010aeaef547b07c9afb42
 
 
 @NgModule({
