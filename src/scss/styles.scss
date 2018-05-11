@@ -127,6 +127,14 @@ body  {
 .job-list .job-detail { margin-top: 12px;}
 .job-list .job-keywords { margin-top: 12px; color: #888888;}
 
+.job-filter {}
+.job-filter li { list-style: none; cursor: pointer;}
+.job-filter li i {opacity: 0;}
+.job-filter li:hover {color: $pink-color;}
+.job-filter li:hover i {opacity: 1;}
+.job-filter li.active {color: $pink-color;}
+.job-filter li.active i {opacity: 1;}
+
 .btn-light-gray  { color:#333; background-color:#dadada; border-color:#dadada;}
 .btn-light-gray:hover { color:#000; background-color:#e9e9e9; border-color:#e9e9e9;}
 
