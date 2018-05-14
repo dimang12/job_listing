@@ -8,7 +8,7 @@ import { CityService } from '../../services/city.service';
 export class HomeLocationComponent implements OnInit {
   public cities: any;
 
-  constructor ( private cityService: CityService){}
+  constructor ( private cityService: CityService) {}
 
   ngOnInit () {
     this.cities = this.cityService.getAllCities().subscribe(data => {

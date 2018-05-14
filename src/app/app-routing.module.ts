@@ -14,10 +14,12 @@ import {SignOutComponent} from './sign-out/sign-out.component';
 import {SignUpComponent} from './sign-up/sign-up.component';
 import {JoblistLocaitonComponent} from './location/joblist.locaiton.component';
 import {HomeLocationComponent} from './location/home/home.location.component';
+import {DetailJobComponent} from './job/detail/detail.job.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'job', component: JobComponent},
+  {path: 'job-detail/:id', component: DetailJobComponent},
   {path: 'location', component: LocationComponent, children: [
       { path: '', component: HomeLocationComponent},
       { path: 'list', component: JoblistLocaitonComponent}

@@ -27,12 +27,14 @@ import {JoblistLocaitonComponent} from './location/joblist.locaiton.component';
 import {HomeLocationComponent} from './location/home/home.location.component';
 
 import { Job } from './job/job';
+import {DetailJobComponent} from './job/detail/detail.job.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     JobComponent,
+      DetailJobComponent,
     HomeComponent,
     AccountComponent,
     CategoryComponent,
