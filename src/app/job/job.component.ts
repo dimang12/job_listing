@@ -31,22 +31,47 @@ export class JobComponent implements OnInit {
   public value_7=7;
   public value_8=8;
 
+  public value_aa = true;
+  public value_bb = false;
+  public value_cc = false;
+  public value_dd = false;
+  public value_ee = false;
+  public value_ff = false;
+
+  public value_11= true;
+  public value_22=false;
+  public value_33=false;
+  public value_44=false;
+  public value_55=false;
+  public value_66=false;
+  public value_77=false;
+  public value_88=false;
+
+  
+  public isTick=true;
+  public isNTick=false;
+  public currentSelect2 = 0; 
+  
+  
+
   public errorMsg;
   
   public jobList = [];
-  public firstPage=this._jobService.getJobs_all();
-
-  
-
+  public firstPage = this._jobService.getJobs_all();
   
   KlickJob(value){
         
-
 //all kind of jobs
     if(value == 'a'){
       this.trigger=value;
       this.switch="showMessage";
       this.jobList= this._jobService.getJobs_all();
+      this.value_aa= true;
+      this.value_bb = false;
+      this.value_cc=false;
+      this.value_dd=false;
+      this.value_ee=false;
+      this.value_ff=false;
      // switch = "all_kind_n_all_level";
      // this._jobService.getJobs_all();
     }
@@ -54,6 +79,13 @@ export class JobComponent implements OnInit {
 //full time jobs
     if(value == 'b'){
       this.trigger=value;
+      this.value_aa= false;
+      this.value_bb = true;
+      this.value_cc=false;
+      this.value_dd=false;
+      this.value_ee=false;
+      this.value_ff=false;
+
       this.switch="showMessage";
  //     this.jobList = this._jobService.getJobs_full();
     }
@@ -61,6 +93,14 @@ export class JobComponent implements OnInit {
 //part time jobs
     if(value == 'c'){
       this.trigger=value;
+      this.trigger=value;
+      this.value_aa= false;
+      this.value_bb = false;
+      this.value_cc=true;
+      this.value_dd=false;
+      this.value_ee=false;
+      this.value_ff=false;
+
       this.switch="showMessage";
  //     this.jobList = this._jobService.getJobs_part();
     }
@@ -68,6 +108,14 @@ export class JobComponent implements OnInit {
 //contract
     if(value == 'd'){
       this.trigger=value;
+      this.trigger=value;
+      this.value_aa= false;
+      this.value_bb = false;
+      this.value_cc=false;
+      this.value_dd=true;
+      this.value_ee=false;
+      this.value_ff=false;
+
       this.switch="showMessage";
  //     this.jobList = this._jobService.getJobs_contract();
     }
@@ -75,6 +123,14 @@ export class JobComponent implements OnInit {
 //intership
     if(value == 'e'){
       this.trigger=value;
+      this.trigger=value;
+      this.value_aa= false;
+      this.value_bb = false;
+      this.value_cc=false;
+      this.value_dd=false;
+      this.value_ee=true;
+      this.value_ff=false;
+
       this.switch="showMessage";
 //      this.jobList = this._jobService.getJobs_intership();
     }
@@ -82,12 +138,28 @@ export class JobComponent implements OnInit {
 //freelance
     if(value == 'f'){
       this.trigger=value;
+      this.trigger=value;
+      this.value_aa= false;
+      this.value_bb = false;
+      this.value_cc=false;
+      this.value_dd=false;
+      this.value_ee=false;
+      this.value_ff=true;
+
       this.switch="showMessage";
   //    this.jobList = this._jobService.getJobs_freelance();
     }
 
 //all levels
     if(value == 1){
+      this.value_11= true;
+      this.value_22 = false;
+      this.value_33=false;
+      this.value_44=false;
+      this.value_55=false;
+      this.value_66=false;
+      this.value_77=false;
+      this.value_88 = false;
       if(value==1 && this.trigger=="a"){
         this.messageShow="inside 1 and inside a";
       }
@@ -110,6 +182,14 @@ export class JobComponent implements OnInit {
 
 //Entry levels
     if(value == 2){
+      this.value_11= false;
+      this.value_22 = true;
+      this.value_33=false;
+      this.value_44=false;
+      this.value_55=false;
+      this.value_66=false;
+      this.value_77=false;
+      this.value_88 = false;
       if(value==2 && this.trigger=="a"){
         this.messageShow="inside 2 and inside a";
       }
@@ -132,6 +212,14 @@ export class JobComponent implements OnInit {
 
 //Junior Level
     if(value == 3){
+      this.value_11= false;
+      this.value_22 = false;
+      this.value_33=true;
+      this.value_44=false;
+      this.value_55=false;
+      this.value_66=false;
+      this.value_77=false;
+      this.value_88 = false;
       if(value==3 && this.trigger=="a"){
         this.messageShow="inside 3 and inside a";
       }
@@ -154,6 +242,14 @@ export class JobComponent implements OnInit {
 
 //Senior Level
     if(value == 4){
+      this.value_11= false;
+      this.value_22 = false;
+      this.value_33=false;
+      this.value_44=true;
+      this.value_55=false;
+      this.value_66=false;
+      this.value_77=false;
+      this.value_88 = false;
       if(value==4 && this.trigger=="a"){
         this.messageShow="inside 4 and inside a";
       }
@@ -177,6 +273,14 @@ export class JobComponent implements OnInit {
 
 //Leader
     if(value == 5){
+      this.value_11= false;
+      this.value_22 = false;
+      this.value_33=false;
+      this.value_44=false;
+      this.value_55=true;
+      this.value_66=false;
+      this.value_77=false;
+      this.value_88 = false;
       if(value==5 && this.trigger=="a"){
         this.messageShow="inside 5 and inside a";
       }
@@ -199,6 +303,14 @@ export class JobComponent implements OnInit {
 
 //Supervisor
     if(value == 6){
+      this.value_11= false;
+      this.value_22 = false;
+      this.value_33=false;
+      this.value_44=false;
+      this.value_55=false;
+      this.value_66=true;
+      this.value_77=false;
+      this.value_88 = false;
       if(value==6 && this.trigger=="a"){
         this.messageShow="inside 6 and inside a";
       }
@@ -221,6 +333,14 @@ export class JobComponent implements OnInit {
 
 //Manager
     if(value == 7){
+      this.value_11= false;
+      this.value_22 = false;
+      this.value_33=false;
+      this.value_44=false;
+      this.value_55=false;
+      this.value_66=false;
+      this.value_77=true;
+      this.value_88 = false;
       if(value==7 && this.trigger=="a"){
         this.messageShow="inside 7 and inside a";
       }
@@ -243,6 +363,14 @@ export class JobComponent implements OnInit {
 
 //More Higher
     if(value == 8){
+      this.value_11= false;
+      this.value_22 = false;
+      this.value_33=false;
+      this.value_44=false;
+      this.value_55=false;
+      this.value_66=false;
+      this.value_77=false;
+      this.value_88 = true;
       if(value==8 && this.trigger=="a"){
         this.messageShow="inside 8 and inside a";
       }
@@ -262,6 +390,7 @@ export class JobComponent implements OnInit {
         this.messageShow="inside 8 and inside f";
       }
     }
+
   }
 
   constructor(private _jobService: JobService) {

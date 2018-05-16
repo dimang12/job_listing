@@ -68,18 +68,28 @@ body  {
 
  ul{
    list-style-type: none;
-
-//   display: inline-table;
-  // overflow: auto;
  }
-li:hover{
-  list-style-image: url(image/tick.png);
-  color:blue;
 
+#ulStyle{
+ list-style-type:none;
+ font-style: bold;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ font-size: 1.05em;
+
+  //color:blue;
 }
 
+.selected{
+  list-style-image: url(image/tick.png);
+}
 
+//.unselected{
+ // list-style-image: url(image/tick.png);
+//}
 
+.tick2{
+  list-style-image: url(image/tick.png);
+}
  //a:visited{
  // list-style-image: url(image/tick.png);
  //}
@@ -101,9 +111,9 @@ li:hover{
 
 
 
- .a:hover{
-  color:blue;
- }
+// .a:hover{
+//  color:blue;
+ //}
 
  .smallBox{
    overflow: auto;
@@ -133,3 +143,12 @@ select{
   background-color: #606060;
   color:red;
 }
+
+
+
+.aa{
+  color:blue;
+  }
+  .danger{color:red;}
+  .special{ color:gold;} 
+  
