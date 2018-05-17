@@ -15,6 +15,7 @@ import {SignUpComponent} from './sign-up/sign-up.component';
 import {JoblistLocaitonComponent} from './location/joblist.locaiton.component';
 import {HomeLocationComponent} from './location/home/home.location.component';
 import {DetailJobComponent} from './job/detail/detail.job.component';
+import {HomeCompanyComponent} from './company/home/home.company.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -24,7 +25,9 @@ const routes: Routes = [
       { path: '', component: HomeLocationComponent},
       { path: 'list', component: JoblistLocaitonComponent}
     ]},
-  {path: 'companies', component: CompanyComponent},
+  {path: 'companies', component: CompanyComponent, children: [
+      {path: '', component: HomeCompanyComponent}
+    ]},
   {path: 'category', component: CategoryComponent},
   {path: 'account', component: AccountComponent, children: [
       {path: '', component: ResumeComponent},

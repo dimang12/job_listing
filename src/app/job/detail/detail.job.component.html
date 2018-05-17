@@ -1,9 +1,36 @@
 <div class="container">
-  <div class="row m-t-60">
-    <div class="col-3"></div>
-    <div class="col-9">
-      <h4 class="">Digital Marketing Specialist</h4>
+  <div class="row m-t-30">
+    <div class="col-4">
+      <div class="ibox">
+        <div class="ibox-title clearfix">
+          <img width="80" class="job-logo" src="assets/img/logo.png" alt="I am KALA"/>
+          <a href="" class="btn btn-outline-info border-round btn-sm float-right">Apply now</a>
+        </div>
+        <div class="ibox-content">
 
+        </div>
+      </div>
+    </div>
+    <div class="col-8 job-detail">
+      <div class="job-list">
+        <h3 class="job-title">{{detail.title}}</h3>
+        <div class="clearfix"><span class="job-company-name">{{detail.companyModel.companyName}}</span> - <span class="job-location">{{detail.cityModel.title}}, CA</span></div>
+      </div>
+
+      <div class="job-body">
+        <h5 class="m-t-30">Summary</h5>
+        <div class="">{{detail.summary}}</div>
+
+        <h5 class="m-t-30">Responsibilities</h5>
+        <div class="">{{detail.duty}}</div>
+
+        <h5 class="m-t-30">Required Experience</h5>
+        <div>
+          {{detail.requirement}}
+        </div>
+
+        <h5 class="m-t-30"></h5>
+      </div>
     </div>
   </div>
 </div>

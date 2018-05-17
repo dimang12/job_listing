@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row m-t-60">
+    <div class="col-10 offset-1">
+      <div class="row">
+        <div class="col-3">
+          <img width="120" class="" src="assets/img/logo.png" alt="I am KALA" />
+        </div>
+
+        <form action="" class="search-control m-0 col-9">
+          <div class="row">
+            <input type="text" class="text-search col-5" name="txtSearch" placeholder="Text search">
+            <input type="text" class="location-search col-4" name="location" placeholder="Companies">
+            <div class="col-3">
+              <button class="btn-primary border-round btn float-right"> <span class="icon-search"></span>  Search </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <div class="row m-t-30">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-4 offset-4 text-center">
+          <h2 class="display-4">Companies</h2>
+          <div class="divider">
+            <hr>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div *ngFor="let com of companies" class="col-4">
+          <div class="box-style-2">
+            <div class="icon-container default-bg">
+              <img class="" width="40" src="assets/img/companies/{{com.id}}.jpeg" alt="{{com.companyName}}" />
+            </div>
+            <div class="body">
+              <a routerLink="" class=""><h2>{{com.companyName}}</h2></a>
+              <p>
+                <span *ngFor="let i of getArray(com.rate)" class="rate icon-star"></span>
+                <span *ngFor="let i of getNoneRate(com.rate)" class="icon-star"></span>
+              </p>
+              <p>{{com.companySummary}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-12">
+
+    </div>
+  </div>
+</div>
+
+

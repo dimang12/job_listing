@@ -26,8 +26,11 @@ import { JobService } from './services/job.service';
 import {JoblistLocaitonComponent} from './location/joblist.locaiton.component';
 import {HomeLocationComponent} from './location/home/home.location.component';
 
-import { Job } from './job/job';
 import {DetailJobComponent} from './job/detail/detail.job.component';
+import {JobsService} from './services/jobs.service';
+import {HomeCompanyComponent} from './company/home/home.company.component';
+import {CompanyService} from './services/company.service';
+import {ListCompanyComponent} from './company/list/list.company.component';
 
 
 @NgModule({
@@ -42,6 +45,8 @@ import {DetailJobComponent} from './job/detail/detail.job.component';
       JoblistLocaitonComponent,
       HomeLocationComponent,
     CompanyComponent,
+      HomeCompanyComponent,
+      ListCompanyComponent,
     ResumeComponent,
     AppliedJobComponent,
     SavedJobComponent,
@@ -58,7 +63,9 @@ import {DetailJobComponent} from './job/detail/detail.job.component';
   providers: [
     ResumeService,
     CityService,
-    JobService
+    JobService,
+    JobsService,
+    CompanyService
   ],
   bootstrap: [AppComponent]
 })
