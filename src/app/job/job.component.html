@@ -23,23 +23,23 @@
       </select>
 -->
      
-    <ul name="Job-types">
-        <li class="a" id="TestT" (click)='KlickJob(value_a)' [id]="value_a">
+    <ul name="Job-types" id="ulStyle">
+        <li [class.selected]="value_aa" id="TestT" (click)='KlickJob(value_a)' [id]="value_a">
         <a>All kind of jobs</a> 
         </li>
-        <li class="a" (click)='KlickJob(value_b)' [id]="value_b">
+        <li [class.selected]="value_bb" (click)='KlickJob(value_b)' [id]="value_b">
           <a>Full-time jobs</a>
         </li>
-        <li class="a" (click)='KlickJob(value_c)' [id]="value_c">
+        <li [class.selected]="value_cc" (click)='KlickJob(value_c)' [id]="value_c">
            <a>Part-time jobs</a>
         </li>
-        <li class="a" (click)='KlickJob(value_d)' [id]="value_d">
+        <li [class.selected]="value_dd" (click)='KlickJob(value_d)' [id]="value_d">
             <a>Contract</a>
         </li>
-        <li class="a" (click)='KlickJob(value_e)' [id]="value_e">
+        <li [class.selected]="value_ee" (click)='KlickJob(value_e)' [id]="value_e">
             <a>Intership</a>
         </li>
-        <li class="a" (click)='KlickJob(value_f)' [id]="value_f">
+        <li [class.selected]="value_ff" (click)='KlickJob(value_f)' [id]="value_f">
             <a>Freelance</a>
         </li>
       </ul> 
@@ -49,29 +49,29 @@
 
 <div>
   <h5 class="offset-1">Skill levels:</h5>
-  <ul>
-    <li class="a" (click)="KlickJob(value_1)" [id]="value_1">
+  <ul id="ulStyle">
+    <li [class.selected]="value_11" (click)="KlickJob(value_1)" [id]="value_1">
       <a>All Levels</a>
     </li>
-    <li class="a" (click)='KlickJob(value_2)' [id]="value_2">
+    <li [class.selected]="value_22" (click)='KlickJob(value_2)' [id]="value_2">
       <a>Entry Level</a>
     </li>
-    <li class="a" (click)='KlickJob(value_3)' [id]="value_3">
+    <li [class.selected]="value_33" (click)='KlickJob(value_3)' [id]="value_3">
      <a>Junior Level</a>
     </li>
-    <li class="a" (click)='KlickJob(value_4)' [id]="value_4">
+    <li [class.selected]="value_44" (click)='KlickJob(value_4)' [id]="value_4">
         <a>Senior Level</a>
     </li>
-    <li class="a" (click)='KlickJob(value_5)' [id]="value_5">
+    <li [class.selected]="value_55" (click)='KlickJob(value_5)' [id]="value_5">
         <a>Leader</a>
     </li>
-    <li class="a" (click)='KlickJob(value_6)' [id]="value_6">
+    <li [class.selected]="value_66" (click)='KlickJob(value_6)' [id]="value_6">
        <a>Supervisor</a>
     </li>
-    <li class="a" (click)='KlickJob(value_7)' [id]="value_7">
+    <li [class.selected]="value_77" (click)='KlickJob(value_7)' [id]="value_7">
         <a>Manager</a>
     </li>
-    <li class="a" (click)='KlickJob(value_8)' [id]="value_8">
+    <li [class.selected]="value_88" (click)='KlickJob(value_8)' [id]="value_8">
         More Higher
     </li>
   </ul>
@@ -113,6 +113,5 @@
 <p>trigger is : {{trigger}}</p>
 <p>message show : {{messageShow}}</p>
 <p>showMessage : {{switch}}</p>
-
 </div>
 
