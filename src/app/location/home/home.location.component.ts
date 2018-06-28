@@ -6,12 +6,12 @@ import { CityService } from '../../services/city.service';
   templateUrl: './home.location.component.html'
 })
 export class HomeLocationComponent implements OnInit {
-  public cities: any;
+  public cities: Object;
 
   constructor ( private cityService: CityService) {}
 
   ngOnInit () {
-    this.cities = this.cityService.getAllCities().subscribe(data => {
+    this.cityService.getAllCities().subscribe(data => {
       this.cities = data;
     });
   }

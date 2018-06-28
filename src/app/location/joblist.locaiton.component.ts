@@ -1,4 +1,6 @@
 import { Component, OnInit} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   // selector: 'list-location-list',
@@ -18,12 +20,24 @@ export class JoblistLocaitonComponent implements OnInit {
     ];
 
   public curSelected= 1;
+  public cityId: number;
+  public jobs: Object;
+  private url= 'http://localhost:8081/jobs/city';
 
-  ngOnInit() {
-
+  constructor(private route: ActivatedRoute, private httpClient: HttpClient) {
+    this.route.params.subscribe(params => this.cityId = params.id);
   }
 
-  public activeFilter(){
+  ngOnInit() {
+    this.httpClient
+      .get(this.url + '/' + this.cityId)
+      .subscribe(data => {
+        this.jobs = data;
+      })
+    ;
+  }
+
+  public activeFilter() {
 
   }
 }

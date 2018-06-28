@@ -1,0 +1,14 @@
+<div class="col-12 m-t-30">
+  <div *ngFor="let job of jobs" class="job-list">
+    <div  class="job-title"><a [routerLink]="['/job-detail', job.id]">{{job.title}}</a></div>
+    <div><span class="job-company-name">{{job.companyModel.companyName}}</span> -
+      <span class="job-location">{{job.cityModel.title}}, CA</span></div>
+    <div class="job-detail">{{job.summary | slice:0:100}}...</div>
+    <div class="job-keywords">
+      Keywords:
+      <a href="" class="btn btn-light-gray btn-sm border-round px-3 mr-2"> Photoshop </a>
+      <a href="" class="btn btn-light-gray btn-sm border-round px-3 mr-2"> Illustrator </a>
+      <a href="" class="btn btn-light-gray btn-sm border-round px-3 mr-2"> HTML </a>
+    </div>
+  </div>
+</div>

@@ -36,7 +36,7 @@
               <img class="" width="40" src="assets/img/companies/{{com.id}}.jpeg" alt="{{com.companyName}}" />
             </div>
             <div class="body">
-              <a routerLink="" class=""><h2>{{com.companyName}}</h2></a>
+              <a routerLink="/companies/list/{{com.id}}" class=""><h2>{{com.companyName}}</h2></a>
               <p>
                 <span *ngFor="let i of getArray(com.rate)" class="rate icon-star"></span>
                 <span *ngFor="let i of getNoneRate(com.rate)" class="icon-star"></span>

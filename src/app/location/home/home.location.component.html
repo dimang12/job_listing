@@ -31,7 +31,7 @@
       </div>
       <div class="row">
         <div class="col-12 text-center mt-2">
-          <a routerLink="list" *ngFor="let city of cities" class="btn btn-outline-info border-round m-2">
+          <a *ngFor="let city of cities" routerLink="list/{{city.id}}"  class="btn btn-outline-info border-round m-2">
             {{city.title}}
             <span class="btn-secondary border-round btn-sm ml-3">{{city.job_number}}</span>
           </a>

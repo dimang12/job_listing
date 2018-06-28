@@ -1,117 +1,45 @@
-<img width="100" class="job-logo offset-3" src="assets/img/logo.png" alt="I am KALA"/>
-<form action="" class="job-search-control row offset-4 col-6">
-  <input type="text" class="text-search col-5" name="txtSearch" placeholder="Text search">
-  <input type="text" class="location-search col-5" name="location" placeholder="Location">
-  <button class="btn-primary border-round col-2"> <span class="icon-search"></span>Search</button>
-</form>
+<div class="container">
 
-<div class="box">
-  <h6 class="offset">Sort by:</h6>
-  <div>
-    <h5 class="offset-1">Job types:</h5>
+  <div class="row m-t-30">
+    <div class="col-3">
+      <img width="120" class="" src="assets/img/logo.png" alt="I am KALA" />
+    </div>
 
-    <div>
-
-       <!--
-      <select class="smallBox" size='6'>
-        <option selected="selected" (click)='jobType(value_a)' [id]="value_a">All kind of jobs</option>
-        <option (click)='jobType(value_b)' [id]="value_b">Full-time jobs</option>
-        <option (click)='KlickJob(value_c)' [id]="value_c">Part-time jobs</option>
-        <option (click)='KlickJob(value_d)' [id]="value_d">Contract</option>
-        <option (click)='KlickJob(value_e)' [id]="value_e">Intership</option>
-        <option (click)='KlickJob(value_f)' [id]="value_f">Freelance</option>
-      </select>
--->
-     
-    <ul name="Job-types" id="ulStyle">
-        <li [class.selected]="value_aa" id="TestT" (click)='KlickJob(value_a)' [id]="value_a">
-        <a>All kind of jobs</a> 
-        </li>
-        <li [class.selected]="value_bb" (click)='KlickJob(value_b)' [id]="value_b">
-          <a>Full-time jobs</a>
-        </li>
-        <li [class.selected]="value_cc" (click)='KlickJob(value_c)' [id]="value_c">
-           <a>Part-time jobs</a>
-        </li>
-        <li [class.selected]="value_dd" (click)='KlickJob(value_d)' [id]="value_d">
-            <a>Contract</a>
-        </li>
-        <li [class.selected]="value_ee" (click)='KlickJob(value_e)' [id]="value_e">
-            <a>Intership</a>
-        </li>
-        <li [class.selected]="value_ff" (click)='KlickJob(value_f)' [id]="value_f">
-            <a>Freelance</a>
-        </li>
-      </ul> 
+    <form action="" class="search-control m-0 col-9">
+      <div class="row">
+        <input type="text" class="text-search col-5" name="txtSearch" placeholder="Text search">
+        <input type="text" class="location-search col-4" name="location" placeholder="Companies">
+        <div class="col-3">
+          <button class="btn-primary border-round btn float-right"> <span class="icon-search"></span>  Search </button>
+        </div>
+      </div>
+    </form>
   </div>
 
+  <div class="row">
+    <div class="col-3">
+      <h6 class="">Sort by:</h6>
+      <div>
+        <h5 class="">Job types:</h5>
+        <div>
+          <ul name="">
+            <li class=""><a>All kind of jobs</a></li>
+            <li class=""><a>Full-time jobs</a></li>
+            <li class=""><a>Part-time jobs</a></li>
+            <li class=""><a>Contract</a></li>
+            <li class=""><a>Internship</a></li>
+            <li class=""><a>Freelance</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="">Skill levels:</h5>
+        </div>
+      </div>
 
+    </div>
 
-<div>
-  <h5 class="offset-1">Skill levels:</h5>
-  <ul id="ulStyle">
-    <li [class.selected]="value_11" (click)="KlickJob(value_1)" [id]="value_1">
-      <a>All Levels</a>
-    </li>
-    <li [class.selected]="value_22" (click)='KlickJob(value_2)' [id]="value_2">
-      <a>Entry Level</a>
-    </li>
-    <li [class.selected]="value_33" (click)='KlickJob(value_3)' [id]="value_3">
-     <a>Junior Level</a>
-    </li>
-    <li [class.selected]="value_44" (click)='KlickJob(value_4)' [id]="value_4">
-        <a>Senior Level</a>
-    </li>
-    <li [class.selected]="value_55" (click)='KlickJob(value_5)' [id]="value_5">
-        <a>Leader</a>
-    </li>
-    <li [class.selected]="value_66" (click)='KlickJob(value_6)' [id]="value_6">
-       <a>Supervisor</a>
-    </li>
-    <li [class.selected]="value_77" (click)='KlickJob(value_7)' [id]="value_7">
-        <a>Manager</a>
-    </li>
-    <li [class.selected]="value_88" (click)='KlickJob(value_8)' [id]="value_8">
-        More Higher
-    </li>
-  </ul>
-</div>
-</div>
-
-</div>
-
-
-<div class="display-location">
-    <script src="greeter.js"></script>
-
-  <h3>{{errorMsg}}</h3>
-<div [ngSwitch]="switch">
-  
-  <div *ngSwitchCase="'showMessage'">
-    <ul *ngFor="let job of jobList">
-      <li><h5 style="color:blueviolet">title {{job.title}}</h5>
-        <p><span style="color:lightskyblue">job_type{{job.job_type}}</span> city {{job.city}}</p>
-      <p>{{job.id}} {{job.summary}} </p>
-        </li>
-    </ul>
-  </div>
-
-  <div *ngSwitchCase="'zzz'">
-    <ul *ngFor="let job of firstPage">
-      <li><h5 style="color:blueviolet">title {{job.title}}</h5>
-        <p><span style="color:lightskyblue">job_type{{job.job_type}}</span> city {{job.city}}</p>
-      <p>{{job.id}} {{job.summary}} </p>
-        </li>
-    </ul>
-  </div>
-  
-  <div *ngSwitchDefault>none
-
+    <div class="col-9">
+      <app-job-list [jobs]="jobs"></app-job-list>
+    </div>
   </div>
 </div>
-
-<p>trigger is : {{trigger}}</p>
-<p>message show : {{messageShow}}</p>
-<p>showMessage : {{switch}}</p>
-</div>
-

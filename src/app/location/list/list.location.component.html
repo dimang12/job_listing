@@ -29,64 +29,8 @@
         </div>
 
         <div class="col-12 m-t-30">
-          <div class="job-list">
-            <div class="job-title"><a [routerLink]="['/job-detail', 1]" [id]="1">Digital / Web Designer </a></div>
-            <div><span class="job-company-name">AVB Marketing</span> - <span class="job-location">Sacramento, CA</span></div>
-            <div class="job-detail">
-              Bachelors degree in web/graphic design or equivalent 3 years of experience in a
-              web graphics design environment. No phone calls please....
-            </div>
-            <div class="job-keywords">
-              Keywords:
-              <a href="" class="btn btn-light-gray btn-sm border-round px-3 mr-2"> Photoshop </a>
-              <a href="" class="btn btn-light-gray btn-sm border-round px-3 mr-2"> Illustrator </a>
-              <a href="" class="btn btn-light-gray btn-sm border-round px-3 mr-2"> HTML </a>
-            </div>
-          </div>
-          <div class="job-list">
-            <div class="job-title">Digital / Web Designer </div>
-            <div><span class="job-company-name">AVB Marketing</span> - <span class="job-location">Sacramento, CA</span></div>
-            <div class="job-detail">
-              Bachelors degree in web/graphic design or equivalent 3 years of experience in a
-              web graphics design environment. No phone calls please....
-            </div>
-            <div class="job-keywords">
-              Keywords:
-              <a href="" class="btn btn-light-gray btn-sm border-round px-3 mr-2"> Photoshop </a>
-              <a href="" class="btn btn-light-gray btn-sm border-round px-3 mr-2"> Illustrator </a>
-              <a href="" class="btn btn-light-gray btn-sm border-round px-3 mr-2"> HTML </a>
-            </div>
-          </div>
-          <div class="job-list">
-            <div class="job-title">Digital / Web Designer </div>
-            <div><span class="job-company-name">AVB Marketing</span> - <span class="job-location">Sacramento, CA</span></div>
-            <div class="job-detail">
-              Bachelors degree in web/graphic design or equivalent 3 years of experience in a
-              web graphics design environment. No phone calls please....
-            </div>
-            <div class="job-keywords">
-              Keywords:
-              <a href="" class="btn btn-light-gray btn-sm border-round px-3 mr-2"> Photoshop </a>
-              <a href="" class="btn btn-light-gray btn-sm border-round px-3 mr-2"> Illustrator </a>
-              <a href="" class="btn btn-light-gray btn-sm border-round px-3 mr-2"> HTML </a>
-            </div>
-          </div>
-          <div class="job-list">
-            <div class="job-title">Digital / Web Designer </div>
-            <div><span class="job-company-name">AVB Marketing</span> - <span class="job-location">Sacramento, CA</span></div>
-            <div class="job-detail">
-              Bachelors degree in web/graphic design or equivalent 3 years of experience in a
-              web graphics design environment. No phone calls please....
-            </div>
-            <div class="job-keywords">
-              Keywords:
-              <a href="" class="btn btn-light-gray btn-sm border-round px-3 mr-2"> Photoshop </a>
-              <a href="" class="btn btn-light-gray btn-sm border-round px-3 mr-2"> Illustrator </a>
-              <a href="" class="btn btn-light-gray btn-sm border-round px-3 mr-2"> HTML </a>
-            </div>
-          </div>
-          <div class="job-list">
-            <div class="job-title">Digital / Web Designer </div>
+          <div *ngFor="let job of jobs" class="job-list">
+            <div class="job-title"><a [routerLink]="['/job-detail', job.id]" [id]="1">Front End Web & Software Designer</a></div>
             <div><span class="job-company-name">AVB Marketing</span> - <span class="job-location">Sacramento, CA</span></div>
             <div class="job-detail">
               Bachelors degree in web/graphic design or equivalent 3 years of experience in a

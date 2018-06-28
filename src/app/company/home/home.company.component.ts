@@ -6,18 +6,20 @@ import {CompanyService} from '../../services/company.service';
   styleUrls: ['home.company.component.scss']
 })
 export class HomeCompanyComponent implements OnInit {
-  public companies: any;
+  public companies: Object;
 
   constructor(private companyService: CompanyService) {
 
   }
 
   ngOnInit () {
-    this.companies = this.companyService.getAllCompanies().subscribe(data => {
+    this.companyService.getAllCompanies().subscribe(data => {
       this.companies = data;
       console.log(this.companies);
     });
   }
+
+
 
   public getArray(length: number): Array<number> {
     return new Array<number>(length);

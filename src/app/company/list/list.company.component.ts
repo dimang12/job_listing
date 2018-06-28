@@ -8,13 +8,15 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class ListCompanyComponent implements OnInit {
   public companyId;
-  public jobs:any;
+  public jobs: Object;
   constructor (private route: ActivatedRoute, private companyService: CompanyService) {
     this.route.params.subscribe(params => { this.companyId = params.id; });
   }
 
   ngOnInit () {
-    this.jobs = this.companyService.getJobsByCompany(this.companyId);
+    this.companyService.getJobsByCompany(this.companyId).subscribe( data => {
+      this.jobs = data;
+    });
   }
 
 }

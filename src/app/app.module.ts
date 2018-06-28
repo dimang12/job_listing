@@ -31,6 +31,8 @@ import {JobsService} from './services/jobs.service';
 import {HomeCompanyComponent} from './company/home/home.company.component';
 import {CompanyService} from './services/company.service';
 import {ListCompanyComponent} from './company/list/list.company.component';
+import { SearchComponent } from './search/search.component';
+import { JobListComponent } from './job-list/job-list.component';
 
 
 @NgModule({
@@ -52,7 +54,9 @@ import {ListCompanyComponent} from './company/list/list.company.component';
     SavedJobComponent,
     SignInComponent,
     SignOutComponent,
-    SignUpComponent
+    SignUpComponent,
+    SearchComponent,
+    JobListComponent
   ],
   imports: [
     BrowserModule,

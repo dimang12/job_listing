@@ -16,6 +16,8 @@ import {JoblistLocaitonComponent} from './location/joblist.locaiton.component';
 import {HomeLocationComponent} from './location/home/home.location.component';
 import {DetailJobComponent} from './job/detail/detail.job.component';
 import {HomeCompanyComponent} from './company/home/home.company.component';
+import {ListCompanyComponent} from './company/list/list.company.component';
+import {SearchComponent} from './search/search.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -23,10 +25,11 @@ const routes: Routes = [
   {path: 'job-detail/:id', component: DetailJobComponent},
   {path: 'location', component: LocationComponent, children: [
       { path: '', component: HomeLocationComponent},
-      { path: 'list', component: JoblistLocaitonComponent}
+      { path: 'list/:id', component: JoblistLocaitonComponent}
     ]},
   {path: 'companies', component: CompanyComponent, children: [
-      {path: '', component: HomeCompanyComponent}
+      {path: '', component: HomeCompanyComponent},
+      {path: 'list/:id', component: ListCompanyComponent}
     ]},
   {path: 'category', component: CategoryComponent},
   {path: 'account', component: AccountComponent, children: [
@@ -36,7 +39,8 @@ const routes: Routes = [
       {path: 'sign-in', component: SignInComponent},
       {path: 'sign-out', component: SignOutComponent},
       {path: 'sign-up', component: SignUpComponent}
-    ]}
+    ]},
+  {path: 'search/:s/:l', component: SearchComponent}
 ];
 
 @NgModule({

@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <img width="120" class="m-t-60" src="assets/img/logo.png" alt="I am KALA" />
+      <div class="row">
+        <div class="col-12">
+          <div class="m-t-30">
+            <small>Sort by</small>
+            <h5 class="">Job types:</h5>
+          </div>
+          <ul class="job-filter">
+            <li  *ngFor="let list of filterList" (click)="curSelected=list.id" [class.active]="curSelected==list.id"> <i class="icon-checkmark"></i> {{list.title}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="row m-t-60">
+        <div class="col-12">
+          <form action="" class="search-control m-0 col-9">
+            <div class="row">
+              <input type="text" class="text-search col-5" name="txtSearch" placeholder="Text search">
+              <input type="text" class="location-search col-4" name="location" placeholder="Location">
+              <div class="col-3">
+                <button class="btn-primary border-round btn float-right"> <span class="icon-search"></span>  Search </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-12 m-t-30">
+          <div *ngFor="let job of jobs" class="job-list">
+            <div  class="job-title"><a [routerLink]="['/job-detail', job.id]">{{job.title}}</a></div>
+            <div><span class="job-company-name">{{job.companyModel.companyName}}</span> - <span class="job-location">{{job.cityModel.title}}, CA</span></div>
+            <div class="job-detail">{{job.summary | slice:0:100}}...</div>
+            <div class="job-keywords">
+              Keywords:
+              <a href="" class="btn btn-light-gray btn-sm border-round px-3 mr-2"> Photoshop </a>
+              <a href="" class="btn btn-light-gray btn-sm border-round px-3 mr-2"> Illustrator </a>
+              <a href="" class="btn btn-light-gray btn-sm border-round px-3 mr-2"> HTML </a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
